@@ -1,0 +1,40 @@
+
+{
+  "root": true,
+  "plugins": [
+      "compat"
+    ],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "mocha": true,
+    "jasmine": true
+  },
+  "rules": {
+    "compat/compat": 2,
+    "curly": [1, "all"],
+    "quotes": 0,
+    "no-console": [1, {
+      "allow": ["warn", "error", "info", "table"]
+    }],
+    "no-debugger": 1,
+    "no-var": 1,
+    "semi": [1, "always"],
+    "no-trailing-spaces": 1,
+    "eol-last": 0,
+    "no-unused-vars": 1,
+    "no-underscore-dangle": 0,
+    "no-alert": 0,
+    "no-lone-blocks": 0
+  },
+  "settings": {
+    "polyfills": ["promises", "urlsearchparams"]
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"]
+}
