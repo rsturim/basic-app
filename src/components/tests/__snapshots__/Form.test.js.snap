@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A form for signing up users should match the snapshot 1`] = `
+<form
+  data-testid="addUserForm"
+  onSubmit={[Function]}
+>
+  <input
+    data-testid="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <input
+    data-testid="email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <input
+    data-testid="number"
+    onChange={[Function]}
+    placeholder="Number"
+    type="text"
+    value=""
+  />
+  <div>
+    <button
+      className="btn btn-primary"
+      data-testid="submitButton"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      className="btn btn-link"
+      data-testid="clearButton"
+      onClick={[Function]}
+    >
+      Clear
+    </button>
+  </div>
+  <div>
+    <button
+      className="btn btn-link"
+      data-testid="prefillButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Pre-fill
+    </button>
+  </div>
+</form>
+`;

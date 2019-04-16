@@ -13,6 +13,7 @@
         "start": "webpack-dev-server --hot --inline --config webpack.dev.js",
         "build": "webpack --config webpack.prod.js  --progress --profile --colors",
         "test": "jest",
+        "update-snapshots": "jest -u",
         "test-watch": "jest --watch",
         "eslint": "eslint --ext .jsx,.js src/;exit 0",
         "eslint-fix": "eslint --fix --ext .jsx,.js src/;exit 0",

@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
 import '../styles/form.scss';
 
+import { prefillContact } from '../common/constants';
+
+import api from '../common/api';
+
 export default class Form extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        this.defaultState = {
             name: '',
             email: '',
             number: '',
         };
+
+        this.state = this.defaultState;
     }
 
     handleChange = str => e => {
         this.setState({ [str]: e.currentTarget.value });
     };
+
     handleSubmit = e => {
         e.preventDefault();
-        console.info('submitting');
+        return api.addUser(
+            this.state.name,
+            this.state.email,
+            this.state.number,
+        );
     };
     handlePromotionClick = e => {
         this.setState(prevState => ({ optIn: !prevState.optIn }));
@@ -25,20 +36,12 @@ export default class Form extends Component {
 
     prefill = e => {
         e.preventDefault();
-        this.setState({
-            name: 'John Doe',
-            email: 'john@doe.com',
-            number: '802-555-1212',
-        });
+        this.setState(prefillContact);
     };
 
     clearForm = e => {
         e.preventDefault();
-        this.setState({
-            name: '',
-            email: '',
-            number: '',
-        });
+        this.setState(this.defaultState);
     };
 
     render() {
@@ -47,8 +50,8 @@ export default class Form extends Component {
                 <input
                     data-testid="name"
                     type="text"
-                    onChange={this.handleChange('name')}
                     placeholder="Name"
+                    onChange={this.handleChange('name')}
                     value={this.state.name}
                 />
                 <input
