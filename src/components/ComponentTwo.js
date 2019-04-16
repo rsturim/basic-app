@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import Address from './Address';
+
 class ComponentTwo extends Component {
     constructor(props) {
         super(props);
     }
-
-    componentDidMount() {}
-
-    shouldComponentUpdate(nextProps, nextState) {}
-
-    componentDidUpdate(prevProps, prevState) {}
-
-    componentWillUnmount() {}
 
     render() {
         return (
@@ -45,15 +39,22 @@ class ComponentTwo extends Component {
                             </p>
                             <hr className="my-4" />
                             <p>
-                                Vitae sed mi pulvinar, pede nec quisque sed nisl
-                                in, sapien nam in tincidunt amet suspendisse
-                                vel. Wisi a curabitur. Cum pretium fusce fusce,
-                                faucibus etiam ligula, orci pretium ut quam
-                                aliquam sociis, arcu luctus. Donec vel lectus
-                                quisque vel, libero lorem ac velit quisque
-                                bibendum pede, justo imperdiet nullam magna,
-                                faucibus euismod dolor.
+                                Vitaeasdasds sed mi pulvinar, pede nec quisque
+                                sed nisl in, sapien nam in tincidunt amet
+                                suspendisse vel. Wisi a curabitur. Cum pretium
+                                fusce fusce, faucibus etiam ligula, orci pretium
+                                ut quam aliquam sociis, arcu luctus. Donec vel
+                                lectus quisque vel, libero lorem ac velit
+                                quisque bibendum pede, justo imperdiet nullam
+                                magna, faucibus euismod dolor.
                             </p>
+                            <Address
+                                person="Joe Smith"
+                                street="123 Cupcake lane"
+                                city="Emerald City"
+                                state="VT"
+                                zip="05445"
+                            />
                         </div>
                     </div>
                 </div>
