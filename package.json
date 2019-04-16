@@ -33,6 +33,7 @@
     "devDependencies": {
         "@babel/cli": "^7.4.3",
         "@babel/core": "^7.4.3",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
         "@babel/preset-env": "^7.4.3",
         "@babel/preset-react": "^7.0.0",
         "autoprefixer": "^9.5.1",
@@ -72,7 +73,11 @@
         "setupFilesAfterEnv": [
             "./src/polyfills/enzyme.setup.js"
         ],
-        "testURL": "http://localhost"
+        "testURL": "http://localhost",
+        "moduleNameMapper": {
+            "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+            "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+        }
     },
     "browserslist": {
         "development": [
