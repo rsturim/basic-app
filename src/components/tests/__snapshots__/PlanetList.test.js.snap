@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A test should match the snapshot 1`] = `
+<PlanetList>
+  <div
+    className="planet-container"
+  >
+    <div
+      className="planet-list"
+    >
+      <div>
+        loading planets
+      </div>
+    </div>
+    <div
+      className="life-cycles"
+    >
+      <p
+        className="life-cycle"
+      >
+        componentDidMount
+      </p>
+    </div>
+  </div>
+</PlanetList>
+`;

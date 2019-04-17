@@ -10,7 +10,7 @@ import Planets from './pages/Planets';
 const App = () => (
     <Router>
         <div>
-            <Route exact path="/" component={Planets} />
+            <Route exact path="/" component={ComponentOne} />
             <Route path="/one" component={ComponentOne} />
             <Route path="/two" component={ComponentTwo} />
             <Route path="/signup" component={Signup} />

@@ -1,3 +1,14 @@
 .container {
     margin: 50px auto;
 }
+
+.planet-container {
+    display: flex;
+    flex-direction: row;
+    .planet-list {
+        flex: 1;
+    }
+    .life-cycles {
+        flex: 1;
+    }
+}

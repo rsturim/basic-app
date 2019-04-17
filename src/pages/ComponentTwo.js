@@ -13,7 +13,7 @@ class ComponentTwo extends Component {
         return (
             <div className="container">
                 <div>
-                    <Header>Component two</Header>
+                    <Header>Address</Header>
                     <Nav item="/two" />
 
                     <p className="lead">

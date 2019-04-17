@@ -9,12 +9,6 @@ const NAV_LIST = [
 ];
 
 export default class Nav extends Component {
-    constructor(props) {
-        super(props);
-
-        this.item = props.item;
-    }
-
     renderList() {
         const listItems = NAV_LIST.map(nav => {
             if (this.props.item == nav.path) {

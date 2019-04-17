@@ -69,14 +69,7 @@ export default class Form extends Component {
                     value={this.state.number}
                 />
 
-                <div>
-                    <button
-                        type="submit"
-                        className="btn btn-primary"
-                        data-testid="submitButton"
-                    >
-                        Submit
-                    </button>
+                <div className="actions">
                     <button
                         data-testid="clearButton"
                         className="btn btn-link"
@@ -84,9 +77,7 @@ export default class Form extends Component {
                     >
                         Clear
                     </button>
-                </div>
 
-                <div>
                     <button
                         type="button"
                         className="btn btn-link"
@@ -94,6 +85,13 @@ export default class Form extends Component {
                         onClick={this.prefill}
                     >
                         Pre-fill
+                    </button>
+                    <button
+                        type="submit"
+                        className="btn btn-primary"
+                        data-testid="submitButton"
+                    >
+                        Submit
                     </button>
                 </div>
             </form>

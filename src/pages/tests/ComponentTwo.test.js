@@ -19,7 +19,7 @@ describe('ComponentTwo', () => {
     });
 
     test('should find and verify and item in the DOM', () => {
-        expect(wrapper.find('.display-5').text()).toBe('Component two');
+        expect(wrapper.find('.display-5').text()).toBe('Address');
     });
 
     test('should match the snapshot', () => {

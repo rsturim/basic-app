@@ -26,14 +26,9 @@ exports[`A form for signing up users should match the snapshot 1`] = `
     type="text"
     value=""
   />
-  <div>
-    <button
-      className="btn btn-primary"
-      data-testid="submitButton"
-      type="submit"
-    >
-      Submit
-    </button>
+  <div
+    className="actions"
+  >
     <button
       className="btn btn-link"
       data-testid="clearButton"
@@ -41,8 +36,6 @@ exports[`A form for signing up users should match the snapshot 1`] = `
     >
       Clear
     </button>
-  </div>
-  <div>
     <button
       className="btn btn-link"
       data-testid="prefillButton"
@@ -50,6 +43,13 @@ exports[`A form for signing up users should match the snapshot 1`] = `
       type="button"
     >
       Pre-fill
+    </button>
+    <button
+      className="btn btn-primary"
+      data-testid="submitButton"
+      type="submit"
+    >
+      Submit
     </button>
   </div>
 </form>

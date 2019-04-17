@@ -31,7 +31,7 @@ exports[`App should match the snapshot 1`] = `
           exact={true}
           path="/"
         >
-          <Planets
+          <ComponentOne
             history={
               Object {
                 "action": "POP",
@@ -76,11 +76,11 @@ exports[`App should match the snapshot 1`] = `
                 <h3
                   className="display-5"
                 >
-                  Planet List
+                  Component 1
                 </h3>
               </Header>
               <Nav
-                item="/planets"
+                item="/one"
               >
                 <div>
                   <ul
@@ -90,18 +90,12 @@ exports[`App should match the snapshot 1`] = `
                       className="nav-item"
                       key="One"
                     >
-                      <Link
-                        className="nav-link"
-                        to="/one"
+                      <a
+                        className="nav-link active"
+                        href="#"
                       >
-                        <a
-                          className="nav-link"
-                          href="/one"
-                          onClick={[Function]}
-                        >
-                          One
-                        </a>
-                      </Link>
+                        One
+                      </a>
                     </li>
                     <li
                       className="nav-item"
@@ -141,19 +135,35 @@ exports[`App should match the snapshot 1`] = `
                       className="nav-item"
                       key="Planets"
                     >
-                      <a
-                        className="nav-link active"
-                        href="#"
+                      <Link
+                        className="nav-link"
+                        to="/planets"
                       >
-                        Planets
-                      </a>
+                        <a
+                          className="nav-link"
+                          href="/planets"
+                          onClick={[Function]}
+                        >
+                          Planets
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </Nav>
-              <PlanetList />
+              <p
+                className="lead"
+              >
+                Nulla lacus justo semper commodo nullam etiam, porta ipsum nonummy.
+              </p>
+              <hr
+                className="my-4"
+              />
+              <p>
+                Pretium fusce fusce, faucibus etiam ligula, orci pretium ut quam aliquam sociis, arcu luctus. Donec vel lectus quisque vel, libero lorem ac velit quisque bibendum pede, justo imperdiet nullam magna, faucibus euismod dolor. Suscipit dolor id cras maecenas. Nulla lacus justo semper commodo nullam etiam, porta ipsum nonummy ut nunc interdum, tincidunt mi urna cras, et et at aenean mollis morbi odio, ornare eu sagittis.
+              </p>
             </div>
-          </Planets>
+          </ComponentOne>
         </Route>
         <Route
           component={[Function]}
