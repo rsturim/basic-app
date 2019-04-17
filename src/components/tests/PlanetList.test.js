@@ -81,6 +81,16 @@ describe('A test', () => {
         expect(wrapper.find('.life-cycle').text()).toBe('componentDidUpdate');
     });
 
+    test('can kebabCase a string correctly', () => {
+        const wrapper = shallow(<PlanetList />);
+
+        const helloWorldTest = wrapper.instance().kebabCase('Hello World');
+        expect(helloWorldTest).toBe('hello-world');
+
+        const falseResult = wrapper.instance().kebabCase('');
+        expect(falseResult).toBe('');
+    });
+
     test('should match the snapshot', () => {
         const wrapper = mount(<PlanetList />);
 

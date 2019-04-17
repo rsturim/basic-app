@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import SwapiService from '../common/SwapiService';
 
-import { kebabCase } from '../common/utils';
 export default class PlanetList extends Component {
     constructor(props) {
         super(props);
@@ -47,7 +46,7 @@ export default class PlanetList extends Component {
 
     renderPlanetListItmes(planets) {
         return planets.map(p => (
-            <li key={p.name} data-testid={kebabCase(p.name)}>
+            <li key={p.name} data-testid={this.kebabCase(p.name)}>
                 {p.name}
             </li>
         ));
@@ -59,6 +58,26 @@ export default class PlanetList extends Component {
         } else {
             return false;
         }
+    }
+
+    kebabCase(string) {
+        let result = string;
+
+        // Convert camelCase capitals to kebab-case.
+        result = result.replace(/([a-z][A-Z])/g, function(match) {
+            return match.substr(0, 1) + '-' + match.substr(1, 1).toLowerCase();
+        });
+
+        // Convert non-camelCase capitals to lowercase.
+        result = result.toLowerCase();
+
+        // Convert non-alphanumeric characters to hyphens
+        result = result.replace(/[^-a-z0-9]+/g, '-');
+
+        // Remove hyphens from both ends
+        result = result.replace(/^-+/, '').replace(/-$/, '');
+
+        return result;
     }
 
     toggleEndor = planets => {
