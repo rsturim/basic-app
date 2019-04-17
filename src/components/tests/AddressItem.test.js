@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Address from '../Address';
+import AddressItem from '../AddressItem';
 import toJson from 'enzyme-to-json';
 
 describe('An addres component', () => {
     let wrapper = {};
     beforeEach(() => {
         wrapper = mount(
-            <Address
+            <AddressItem
                 person="Joe Smith"
                 street="123 Cupcake lane"
                 city="Emerald City"
@@ -24,8 +24,6 @@ describe('An addres component', () => {
         expect(wrapper.props().city).toEqual('Emerald City');
         expect(wrapper.props().state).toEqual('VT');
         expect(wrapper.props().zip).toEqual('05445');
-
-        // wrapper.unmount();
     });
 
     test('should also match the snapshot', () => {

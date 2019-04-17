@@ -10,7 +10,7 @@ function renderItem(type, item) {
     }
 }
 
-export default function Address(props) {
+export default function AddressItem(props) {
     const { person, city, street, state, zip } = props;
 
     return (
@@ -24,7 +24,7 @@ export default function Address(props) {
     );
 }
 
-Address.propTypes = {
+AddressItem.propTypes = {
     person: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,

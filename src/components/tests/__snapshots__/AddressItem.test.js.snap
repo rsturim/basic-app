@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`An addres component should also match the snapshot 1`] = `
-<Address
+<AddressItem
   city="Emerald City"
   person="Joe Smith"
   state="VT"
@@ -35,5 +35,5 @@ exports[`An addres component should also match the snapshot 1`] = `
       05445
     </div>
   </address>
-</Address>
+</AddressItem>
 `;

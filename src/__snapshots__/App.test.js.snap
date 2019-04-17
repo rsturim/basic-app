@@ -76,7 +76,7 @@ exports[`App should match the snapshot 1`] = `
                 <h3
                   className="display-5"
                 >
-                  Component 1
+                  Component One
                 </h3>
               </Header>
               <Nav
@@ -99,18 +99,18 @@ exports[`App should match the snapshot 1`] = `
                     </li>
                     <li
                       className="nav-item"
-                      key="Two"
+                      key="Address"
                     >
                       <Link
                         className="nav-link"
-                        to="/two"
+                        to="/address"
                       >
                         <a
                           className="nav-link"
-                          href="/two"
+                          href="/address"
                           onClick={[Function]}
                         >
-                          Two
+                          Address
                         </a>
                       </Link>
                     </li>
@@ -171,7 +171,7 @@ exports[`App should match the snapshot 1`] = `
         />
         <Route
           component={[Function]}
-          path="/two"
+          path="/address"
         />
         <Route
           component={[Function]}

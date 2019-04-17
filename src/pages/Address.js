@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import Nav from '../components/Nav';
 import Header from '../components/Header';
-import Address from '../components/Address';
+import AddressItem from '../components/AddressItem';
 
-class ComponentTwo extends Component {
+class Address extends Component {
     constructor(props) {
         super(props);
     }
@@ -30,7 +30,7 @@ class ComponentTwo extends Component {
                         velit quisque bibendum pede, justo imperdiet nullam
                         magna, faucibus euismod dolor.
                     </p>
-                    <Address
+                    <AddressItem
                         person="Joe Smith"
                         street="123 Cupcake lane"
                         city="Emerald City"
@@ -43,6 +43,6 @@ class ComponentTwo extends Component {
     }
 }
 
-ComponentTwo.propTypes = {};
+Address.propTypes = {};
 
-export default ComponentTwo;
+export default Address;

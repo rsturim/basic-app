@@ -1,19 +1,19 @@
 import React from 'react';
 
-import ComponentTwo from '../ComponentTwo';
+import Address from '../Address';
 import { MemoryRouter } from 'react-router-dom';
 
 import { mount, shallow } from 'enzyme';
 
 import toJson from 'enzyme-to-json';
 
-describe('ComponentTwo', () => {
+describe('The address page', () => {
     let wrapper;
 
     beforeEach(() => {
         wrapper = mount(
             <MemoryRouter>
-                <ComponentTwo />
+                <Address />
             </MemoryRouter>,
         );
     });
@@ -23,7 +23,7 @@ describe('ComponentTwo', () => {
     });
 
     test('should match the snapshot', () => {
-        const shallowTree = shallow(<ComponentTwo />);
+        const shallowTree = shallow(<Address />);
 
         expect(toJson(shallowTree)).toMatchSnapshot();
     });

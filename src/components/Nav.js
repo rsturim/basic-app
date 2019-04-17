@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NAV_LIST = [
     { title: 'One', path: '/one' },
-    { title: 'Two', path: '/two' },
+    { title: 'Address', path: '/address' },
     { title: 'Sign Up', path: '/signup' },
     { title: 'Planets', path: '/planets' },
 ];

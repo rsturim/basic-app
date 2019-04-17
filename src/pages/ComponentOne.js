@@ -11,7 +11,7 @@ class ComponentOne extends Component {
     render() {
         return (
             <div className="container">
-                <Header>Component 1</Header>
+                <Header>Component One</Header>
                 <Nav item="/one" />
                 <p className="lead">
                     Nulla lacus justo semper commodo nullam etiam, porta ipsum
