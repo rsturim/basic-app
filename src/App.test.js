@@ -1,17 +1,20 @@
 import React from 'react';
-
 import App from './App';
+
+import toJson from 'enzyme-to-json';
 import { mount } from 'enzyme';
 
 describe('App', () => {
     test('should find and verify and item in the DOM', () => {
         const wrapper = mount(<App />);
-        let headerTest = wrapper.find('.display-5').text();
 
-        expect(headerTest).toEqual('Component 1');
+        expect(wrapper.find('PlanetList').length).toEqual(1);
+        expect(wrapper.find('.nav-pills li').length).toEqual(4);
+    });
 
-        // console.log(wrapper.debug());
+    test('should match the snapshot', () => {
+        const wrapper = mount(<App />);
 
-        // expect(wrapper.find('h1').text()).toBe('Simple React Boilerplate');
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -19,15 +19,7 @@ describe('ComponentTwo', () => {
     });
 
     test('should find and verify and item in the DOM', () => {
-        expect(wrapper.find('.display-5').text()).toBe('Component 2');
-    });
-
-    test('should be able to click a link', () => {
-        // let link = wrapper.find('.nav-link').first();
-        // let link = wrapper.find('[to="/"]');
-        let link = wrapper.find('Link');
-
-        expect(link.text()).toBe('one');
+        expect(wrapper.find('.display-5').text()).toBe('Component two');
     });
 
     test('should match the snapshot', () => {

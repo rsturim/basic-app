@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom';
-
+import Nav from '../components/Nav';
+import Header from '../components/Header';
 import Address from '../components/Address';
 
 class ComponentTwo extends Component {
@@ -13,19 +13,8 @@ class ComponentTwo extends Component {
         return (
             <div className="container">
                 <div>
-                    <h3 className="display-5">Component 2</h3>
-                    <ul className="nav nav-pills mt-4 mb-4">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">
-                                one
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#">
-                                two
-                            </a>
-                        </li>
-                    </ul>
+                    <Header>Component two</Header>
+                    <Nav item="/two" />
 
                     <p className="lead">
                         Lorem ipsum dolor sit amet, debitis integer integer

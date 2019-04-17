@@ -12,6 +12,6 @@ describe('ComponentOne', () => {
             </MemoryRouter>,
         );
 
-        expect(wrapper.find('.display-5').text()).toBe('Component 1');
+        expect(wrapper.find('Header').text()).toBe('Component 1');
     });
 });

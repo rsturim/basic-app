@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom';
+import Nav from '../components/Nav';
+import Header from '../components/Header';
 
 class ComponentOne extends Component {
     constructor(props) {
@@ -10,19 +11,8 @@ class ComponentOne extends Component {
     render() {
         return (
             <div className="container">
-                <h3 className="display-5">Component 1</h3>
-                <ul className="nav nav-pills mt-4 mb-4">
-                    <li className="nav-item">
-                        <a className="nav-link active" href="#">
-                            one
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/two">
-                            two
-                        </Link>
-                    </li>
-                </ul>
+                <Header>Component 1</Header>
+                <Nav item="/one" />
                 <p className="lead">
                     Nulla lacus justo semper commodo nullam etiam, porta ipsum
                     nonummy.
