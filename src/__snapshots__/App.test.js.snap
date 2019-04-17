@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<App>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        >
+          <Planets
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+          >
+            <div
+              className="container"
+            >
+              <Header>
+                <h3
+                  className="display-5"
+                >
+                  Planet List
+                </h3>
+              </Header>
+              <Nav
+                item="/planets"
+              >
+                <div>
+                  <ul
+                    className="nav nav-pills mt-4 mb-4"
+                  >
+                    <li
+                      className="nav-item"
+                      key="One"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="/one"
+                      >
+                        <a
+                          className="nav-link"
+                          href="/one"
+                          onClick={[Function]}
+                        >
+                          One
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="nav-item"
+                      key="Two"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="/two"
+                      >
+                        <a
+                          className="nav-link"
+                          href="/two"
+                          onClick={[Function]}
+                        >
+                          Two
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="nav-item"
+                      key="Sign Up"
+                    >
+                      <Link
+                        className="nav-link"
+                        to="/signup"
+                      >
+                        <a
+                          className="nav-link"
+                          href="/signup"
+                          onClick={[Function]}
+                        >
+                          Sign Up
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="nav-item"
+                      key="Planets"
+                    >
+                      <a
+                        className="nav-link active"
+                        href="#"
+                      >
+                        Planets
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Nav>
+              <PlanetList />
+            </div>
+          </Planets>
+        </Route>
+        <Route
+          component={[Function]}
+          path="/one"
+        />
+        <Route
+          component={[Function]}
+          path="/two"
+        />
+        <Route
+          component={[Function]}
+          path="/signup"
+        />
+        <Route
+          component={[Function]}
+          path="/planets"
+        />
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;
