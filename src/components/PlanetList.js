@@ -6,8 +6,6 @@ export default class PlanetList extends Component {
     constructor(props) {
         super(props);
 
-        // this.endor;
-
         this.state = {
             isLoading: true,
             planets: [],
@@ -40,7 +38,9 @@ export default class PlanetList extends Component {
                 isLoading: false,
                 planets: response.data.results,
             });
-            this.endor = response.data.results.find(p => p.name == 'Endor');
+            this.alderaan = response.data.results.find(
+                p => p.name == 'Alderaan',
+            );
         });
     }
 
@@ -52,13 +52,23 @@ export default class PlanetList extends Component {
         ));
     }
 
-    hasEndor(planets) {
+    hasAlderaan(planets) {
         if (planets && planets.length > 0) {
-            return planets.find(p => p.name == 'Endor') ? true : false;
+            return planets.find(p => p.name == 'Alderaan') ? true : false;
         } else {
             return false;
         }
     }
+
+    toggleAlderaan = planets => {
+        if (this.hasAlderaan(planets)) {
+            planets = planets.filter(p => p.name !== this.alderaan.name);
+        } else {
+            planets.push(this.alderaan);
+        }
+
+        this.setState({ planets });
+    };
 
     kebabCase(string) {
         let result = string;
@@ -80,19 +90,9 @@ export default class PlanetList extends Component {
         return result;
     }
 
-    toggleEndor = planets => {
-        if (this.hasEndor(planets)) {
-            planets = planets.filter(p => p.name !== this.endor.name);
-        } else {
-            planets.push(this.endor);
-        }
-
-        this.setState({ planets });
-    };
-
     render() {
         const { planets, isLoading, lifeCycle } = this.state;
-        let hasEndor = this.hasEndor(planets);
+        let hasAlderaan = this.hasAlderaan(planets);
 
         return (
             <div className="planet-container">
@@ -109,11 +109,11 @@ export default class PlanetList extends Component {
                         <button
                             type="button"
                             className={`btn btn-${
-                                hasEndor ? 'danger' : 'success'
+                                hasAlderaan ? 'danger' : 'success'
                             }`}
-                            onClick={e => this.toggleEndor(planets)}
+                            onClick={e => this.toggleAlderaan(planets)}
                         >
-                            {hasEndor ? 'remove' : 'add'} Endor
+                            {hasAlderaan ? 'remove' : 'add'} Alderaan
                         </button>
                     )}
                     <p className="life-cycle">{lifeCycle}</p>

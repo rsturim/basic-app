@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Planets page render a dom snapshot for testing 1`] = `
+<div
+  className="container"
+>
+  <Header>
+    Planet List
+  </Header>
+  <Nav
+    item="/planets"
+  />
+  <PlanetList />
+</div>
+`;

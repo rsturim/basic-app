@@ -7,10 +7,12 @@ import api from '../../common/api';
 import Form from '../Form';
 
 /* == form selectors */
+
 // buttons
 const submitButtonSelector = '[data-testid="submitButton"]';
 const clearButtonSelector = '[data-testid="clearButton"]';
 const prefillButtonSelector = '[data-testid="prefillButton"]';
+
 // inputs
 const nameFieldSelector = '[data-testid="name"]';
 const emailFieldSelector = '[data-testid="email"]';
@@ -31,15 +33,15 @@ describe('A form for signing up users', () => {
     test('should present buttons to interactive the form', () => {
         const wrapper = shallow(<Form />);
 
-        expect(wrapper.find('button').length).toEqual(3);
+        expect(wrapper.find('button').length).toBe(3);
 
         const submitButton = wrapper.find(submitButtonSelector);
         const clearButton = wrapper.find(clearButtonSelector);
         const prefillButton = wrapper.find(prefillButtonSelector);
 
-        expect(submitButton.text()).toEqual('Submit');
-        expect(clearButton.text()).toEqual('Clear');
-        expect(prefillButton.text()).toEqual('Pre-fill');
+        expect(submitButton.text()).toBe('Submit');
+        expect(clearButton.text()).toBe('Clear');
+        expect(prefillButton.text()).toBe('Pre-fill');
     });
 
     test('should match the snapshot', () => {
@@ -55,11 +57,11 @@ describe('A form for signing up users', () => {
         const numberField = wrapper.find(nameFieldSelector);
 
         test('inputs to add you personal information should be available', () => {
-            expect(wrapper.find('input').length).toEqual(3);
+            expect(wrapper.find('input').length).toBe(3);
 
-            expect(nameField.value).toEqual(undefined);
-            expect(emailField.value).toEqual(undefined);
-            expect(numberField.value).toEqual(undefined);
+            expect(nameField.value).toBe(undefined);
+            expect(emailField.value).toBe(undefined);
+            expect(numberField.value).toBe(undefined);
         });
 
         test('users can fill out form the form', () => {
@@ -80,9 +82,9 @@ describe('A form for signing up users', () => {
                 bart.number,
             );
 
-            expect(nameInput.props().value).toEqual(bart.name);
-            expect(emailInput.props().value).toEqual(bart.email);
-            expect(numberInput.props().value).toEqual(bart.number);
+            expect(nameInput.props().value).toBe(bart.name);
+            expect(emailInput.props().value).toBe(bart.email);
+            expect(numberInput.props().value).toBe(bart.number);
         });
 
         test('users should be able to use the "pre-fill" button to populate the form', () => {
@@ -91,25 +93,25 @@ describe('A form for signing up users', () => {
             /* == test pre-fill */
             wrapper.find(prefillButtonSelector).simulate('click', mockedEvent);
 
-            expect(wrapper.find(nameFieldSelector).props().value).toEqual(
+            expect(wrapper.find(nameFieldSelector).props().value).toBe(
                 prefillContact.name,
             );
-            expect(wrapper.find(emailFieldSelector).props().value).toEqual(
+            expect(wrapper.find(emailFieldSelector).props().value).toBe(
                 prefillContact.email,
             );
-            expect(wrapper.find(numberFieldSelector).props().value).toEqual(
+            expect(wrapper.find(numberFieldSelector).props().value).toBe(
                 prefillContact.number,
             );
 
             /* == test clear */
             wrapper.find(clearButtonSelector).simulate('click', mockedEvent);
 
-            expect(wrapper.find(nameFieldSelector).props().value).toEqual('');
-            expect(wrapper.find(emailFieldSelector).props().value).toEqual('');
-            expect(wrapper.find(numberFieldSelector).props().value).toEqual('');
+            expect(wrapper.find(nameFieldSelector).props().value).toBe('');
+            expect(wrapper.find(emailFieldSelector).props().value).toBe('');
+            expect(wrapper.find(numberFieldSelector).props().value).toBe('');
         });
 
-        //submits the form, calls api
+        /* == submits the form, calls api  */
         test('users can submit the form', () => {
             jest.spyOn(api, 'addUser').mockImplementation(() =>
                 Promise.resolve({ data: 'New User Added' }),
@@ -132,3 +134,11 @@ describe('A form for signing up users', () => {
         });
     });
 });
+
+/*
+    mockImplementation
+    Accepts a function that should be used as the implementation of the mock.
+    The mock itself will still record all calls that go into and instances that
+    come from itself – the only difference is that the implementation will also
+    be executed when the mock is called.
+*/
