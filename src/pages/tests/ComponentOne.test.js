@@ -12,6 +12,8 @@ describe('ComponentOne', () => {
             </MemoryRouter>,
         );
 
+        // console.log(wrapper.debug());
+
         expect(wrapper.find('Header').text()).toBe('Component One');
     });
 });
