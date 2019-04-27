@@ -90,63 +90,123 @@ exports[`App should match the snapshot 1`] = `
                       className="nav-item"
                       key="One"
                     >
-                      <a
-                        className="nav-link active"
-                        href="#"
+                      <NavLink
+                        className="nav-link"
+                        exact={true}
+                        to="/"
                       >
-                        One
-                      </a>
+                        <Route
+                          exact={true}
+                          path="\\\\/"
+                        >
+                          <Link
+                            aria-current="page"
+                            className="nav-link active"
+                            style={Object {}}
+                            to="/"
+                          >
+                            <a
+                              aria-current="page"
+                              className="nav-link active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              One
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
                     </li>
                     <li
                       className="nav-item"
                       key="Address"
                     >
-                      <Link
+                      <NavLink
                         className="nav-link"
+                        exact={true}
                         to="/address"
                       >
-                        <a
-                          className="nav-link"
-                          href="/address"
-                          onClick={[Function]}
+                        <Route
+                          exact={true}
+                          path="\\\\/address"
                         >
-                          Address
-                        </a>
-                      </Link>
+                          <Link
+                            aria-current={null}
+                            className="nav-link"
+                            to="/address"
+                          >
+                            <a
+                              aria-current={null}
+                              className="nav-link"
+                              href="/address"
+                              onClick={[Function]}
+                            >
+                              Address
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
                     </li>
                     <li
                       className="nav-item"
                       key="Sign Up"
                     >
-                      <Link
+                      <NavLink
                         className="nav-link"
+                        exact={true}
                         to="/signup"
                       >
-                        <a
-                          className="nav-link"
-                          href="/signup"
-                          onClick={[Function]}
+                        <Route
+                          exact={true}
+                          path="\\\\/signup"
                         >
-                          Sign Up
-                        </a>
-                      </Link>
+                          <Link
+                            aria-current={null}
+                            className="nav-link"
+                            to="/signup"
+                          >
+                            <a
+                              aria-current={null}
+                              className="nav-link"
+                              href="/signup"
+                              onClick={[Function]}
+                            >
+                              Sign Up
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
                     </li>
                     <li
                       className="nav-item"
                       key="Planets"
                     >
-                      <Link
+                      <NavLink
                         className="nav-link"
+                        exact={true}
                         to="/planets"
                       >
-                        <a
-                          className="nav-link"
-                          href="/planets"
-                          onClick={[Function]}
+                        <Route
+                          exact={true}
+                          path="\\\\/planets"
                         >
-                          Planets
-                        </a>
-                      </Link>
+                          <Link
+                            aria-current={null}
+                            className="nav-link"
+                            to="/planets"
+                          >
+                            <a
+                              aria-current={null}
+                              className="nav-link"
+                              href="/planets"
+                              onClick={[Function]}
+                            >
+                              Planets
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
